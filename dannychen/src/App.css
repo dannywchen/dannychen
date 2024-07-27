@@ -1,3 +1,72 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Custom Color Palette */
+:root {
+  --primary-color: #7e6b8f;
+  --secondary-color: #6b5b95;
+  --tertiary-color: #4b4453;
+  --background-color: #f0e6ef;
+  --text-color: #4a4a4a;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Custom Pointer */
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+}
+
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+}
+
+/* Existing App Styles */
 .App {
   text-align: center;
 }
@@ -14,18 +83,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--tertiary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--background-color);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--secondary-color);
 }
 
 @keyframes App-logo-spin {
